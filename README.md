@@ -1,11 +1,24 @@
-# WebSec-Academy
-WebSec Academy Solved Reports
-Learning path
-Here's how to get the most out of the Web Security Academy
+SQL injection
 
-If you're new to web security, it can be difficult to know where to begin. That's why we've created this suggested learning path to point you in the right direction. We recommend completing the labs as you go, but don't be afraid to move on to the next topic if you get stuck. You can go back to the more challenging labs once you've developed your skills further.
+In this section, we'll explain what SQL injection (SQLi) is, describe some common examples, explain how to find and exploit various kinds of SQL injection vulnerabilities, and summarize how to prevent SQL injection.
+![image](https://user-images.githubusercontent.com/54630212/197042771-2882bcc1-a8d0-4f78-ac28-2e2a171f8db3.png)
 
-When you've started to build up your web security testing skills, you could put them to the test with our Burp Suite Certified Practitioner accreditation. Before you are ready to attempt the Burp Suite Certified Practitioner exam, you should be comfortably able to complete all of the labs within the Web Security Academy labeled "Practitioner" or lower. There is no set time frame for completing the labs, but you must be able to do so without requiring access to the solutions provided.
-Server-side topics
 
-For complete beginners, we recommend starting with our server-side topics. These vulnerabilities are typically easier to learn because you only need to understand what's happening on the server. Our materials and labs will help you develop some of the core knowledge and skills that you will rely on time after time.
+What is SQL injection (SQLi)?
+
+SQL injection (SQLi) is a web security vulnerability that allows an attacker to interfere with the queries that an application makes to its database. It generally allows an attacker to view data that they are not normally able to retrieve. This might include data belonging to other users, or any other data that the application itself is able to access. In many cases, an attacker can modify or delete this data, causing persistent changes to the application's content or behavior.
+
+In some situations, an attacker can escalate an SQL injection attack to compromise the underlying server or other back-end infrastructure, or perform a denial-of-service attack.
+
+What is the impact of a successful SQL injection attack?
+
+A successful SQL injection attack can result in unauthorized access to sensitive data, such as passwords, credit card details, or personal user information. Many high-profile data breaches in recent years have been the result of SQL injection attacks, leading to reputational damage and regulatory fines. In some cases, an attacker can obtain a persistent backdoor into an organization's systems, leading to a long-term compromise that can go unnoticed for an extended period.
+SQL injection examples
+
+There are a wide variety of SQL injection vulnerabilities, attacks, and techniques, which arise in different situations. Some common SQL injection examples include:
+
+    Retrieving hidden data, where you can modify an SQL query to return additional results.
+    Subverting application logic, where you can change a query to interfere with the application's logic.
+    UNION attacks, where you can retrieve data from different database tables.
+    Examining the database, where you can extract information about the version and structure of the database.
+    Blind SQL injection, where the results of a query you control are not returned in the application's responses.
